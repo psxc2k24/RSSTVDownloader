@@ -11,12 +11,12 @@ Work in progress. Expect frequent updates.
 
 
 The following sites are recognized (more can be added by request):
- - TorrentLeech
- - NORBits
- - BLUTopia
- - TorrentDay
- - IPTorrents
- - DigitalCore
+ - TL
+ - NB
+ - BLU
+ - TD
+ - IPT
+ - DC
 
 Requirements:
   - Windows 11
