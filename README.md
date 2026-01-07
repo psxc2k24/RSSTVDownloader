@@ -46,3 +46,10 @@ License:
 
 Warranty:
   - None. Use this at your own risk. The testing done has not yet resulted in a melted computer, but no guarantees are given!
+
+
+Screenshots:
+![Screenshot 1](./Images/Screenshot1.jpg)
+![Screenshot 2](./Images/Screenshot2.jpg)
+![Screenshot 3](./Images/Screenshot3.jpg)
+![Screenshot 4](./Images/Screenshot4.jpg)
