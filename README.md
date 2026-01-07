@@ -27,14 +27,15 @@ Powershell modules used (all included in Powershell 5 by default):
   - Microsoft.PowerShell.Management 3.1.0.0
   - Microsoft.PowerShell.Core 3.0.0.0
 
+App must run on the same computer as your torrent client.
 No admin privileges required.
 
 
 
 Expected behavior:
   - Creation and updating of content in the HKCU:\Software\RSSTVDownloader registry key
-  - Creation of RSSTVDownloader_<DATE>.cmtrace.log files in the %temp% directory. These will not be removed by the app.
-  - Creation of RSSTVDownloader_<DATEANDTIME>.torrent files in the %temp% directory. These will be automatically removed when >1 hour has passed.
+  - Creation of RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. These will not be removed by the app.
+  - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. These will be automatically removed when >1 hour has passed.
   - Internet-traffic is limited to fetching of RSS-feeds and .torrent files from sites. There should be no other forms of external communication.
 
 
