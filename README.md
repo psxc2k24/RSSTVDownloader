@@ -49,6 +49,12 @@ Warranty:
   - None. Use this at your own risk. The testing done has not yet resulted in a melted computer, but no guarantees are given!
 
 
+
+VirusTotal Scan:
+  - https://www.virustotal.com/gui/url/896468e582ef5721171209722079c3fd9b0e4634c6253f833d13cc332a4d82a7
+
+  
+
 Screenshots:
 ![Screenshot 1](./Images/Screenshot1.jpg)
 ![Screenshot 2](./Images/Screenshot2.jpg)
