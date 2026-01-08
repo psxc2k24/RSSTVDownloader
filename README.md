@@ -8,6 +8,7 @@ features include:
 
 Work in progress. Expect frequent updates.
 
+<a href="./bin/x64/RSSTVDownloader.exe" download>Windows exe</a> can be found in the bin/x64 directory and the <a href="./RSSTVDownloader.ps1" download>powershell sourcecode</a> in the root directory.
 
 
 The following sites are recognized (more can be added by request):
