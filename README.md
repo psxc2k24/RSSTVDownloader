@@ -5,6 +5,7 @@ features include:
  - auto-downloading out-of-order episode-releases
  - auto-downloading the same release from different sites/feeds (auto-trading)
  - auto-downloading of repacks/propers
+ - auto-downloading of personal bookmarks on certain sites
 
 Work in progress. Expect frequent updates.
 
@@ -35,8 +36,8 @@ No admin privileges required.
 
 Expected behavior:
   - Creation and updating of content in the HKCU:\Software\RSSTVDownloader registry key
-  - Creation of RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. These will not be removed by the app.
-  - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. These will be automatically removed when >1 hour has passed.
+  - Creation of RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. These will be removed by the app after 7 days.
+  - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. These will be automatically removed when >24 hours has passed.
   - Internet-traffic is limited to fetching of RSS-feeds and .torrent files from sites. There should be no other forms of external communication.
 
 
