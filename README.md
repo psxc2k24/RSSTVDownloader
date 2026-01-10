@@ -5,7 +5,7 @@ features include:
  - auto-downloading out-of-order episode-releases
  - auto-downloading the same release from different sites/feeds (auto-trading)
  - auto-downloading of repacks/propers
- - auto-downloading of personal bookmarks on certain sites
+ - auto-downloading of personal bookmarks from selected sites
 
 Work in progress. Expect frequent updates.
 
