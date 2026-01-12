@@ -93,7 +93,7 @@ $arraySites = @()
 	#IPTorrents
 	$arraySites += [PSCustomObject]@{
 		Name = "IPTorrents"
-		URL  = [String]"https://iptorrents.com/t.rss?download;22;99;4;65;78;5;66;23;26;55;25;79;82;83;24;tp=<RSSKEY>;u=<USERID>"
+		URL  = [String]"https://iptorrents.com/t.rss?download;4;5;22;23;24;25;26;55;60;65;66;78;79;82;83;99;tp=<RSSKEY>;u=<USERID>"
 		RSSKey = [string]""
 		CategoryKey = [string]""
 		Categories = [array]@()
