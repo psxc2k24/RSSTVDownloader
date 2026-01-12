@@ -66,35 +66,40 @@ Screenshots:
 
 
 Short instructions:
-  - Menu-option 'Sites':
+  - Menu-option '**Sites**':
     - This lists the sites availible. The ones marked are active, meaning the RSS-feed for site is downloaded at intervals.
     - Each site listed has two suboptions:
-      - 'Set rSSKey' - this will set/change the RSSKey (and UserID if applicable)
-      - 'Enable Autotrade for this site' - Enables/disabled the Autotrade option.
-        'Autotrade' is defined as downloading the same release(name) from different sites, not triggering the dupe-control for that release. Take care when activating - some sites re-releases the torrent with the same name after repackaging and/or adding files to the release. Observe on which sites you wish to have the Autotrade option on.
+      - '**Set rSSKey**' - this will set/change the RSSKey (and UserID if applicable)
+      - '**Enable Autotrade for this site**' - Enables/disabled the Autotrade option.
+        '**Autotrade**' is defined as downloading the same release(name) from different sites, not triggering the dupe-control for that release. Take care when activating - some sites re-releases the torrent with the same name after repackaging and/or adding files to the release. Observe on which sites you wish to have the Autotrade option on.
 
-  - Menu-option 'Options':
-    - 'Auto-download repack/proper' - a release may be redownloaded if a repack/proper is found. Note that any new repack/proper will be ignored once a repack/proper has been downloaded.
-    - 'Do not auto-bookmark episodes with unknown source or resolution' - some releases do not have a known resolution or source. If the bookmark accepts any resolution and/or source, and the release does not match any known entry, the release will then be classified as a no-match.
-    - 'Limit RSS-feeds to the last hour' - RSS-feeds can become quite big, and if several RSS-feeds are actived the total number of releases to be processed may have a negative impact on the computer/app. Limiting to the last hour will significantly reduce the impact. Beware not to set this if you set the RSS-intrval to 1 hour or more.
-    - 'Ignore year in releasename' - some releases have the year in the releasename, some do not. You can select to ignore the year when auto-downloading releases.
-    - 'RSS Interval' - how often should the app refresh the rss-feeds?
-    - 'Auto-Bookmark missing episodes' - this option keep track of which episodes are downloaded, and which episodes have been skipped. Skipped episodes may happen when several episodes are releases simultanously, out of order.
-    - 'Add Source' - add your own keyword as a valid Source.
-    - 'Add Resolution' - add your own keyword as a valid Resolution.
+  - Menu-option '**Options**':
+    - '**RSS Interval**' - how often should the app refresh the rss-feeds?
+    - '**Auto-Bookmark missing episodes**' - this option keep track of which episodes are downloaded, and which episodes have been skipped. Skipped episodes may happen when several episodes are releases simultanously, out of order.
+    - '**Auto-download repack/proper**' - a release may be redownloaded if a repack/proper is found. Note that any new repack/proper will be ignored once a repack/proper has been downloaded.
+    - '**Do not auto-bookmark episodes with unknown source or resolution**' - some releases do not have a known resolution or source. If the bookmark accepts any resolution and/or source, and the release does not match any known entry, the release will then be classified as a no-match.
+    - '**Limit RSS-feeds to the last hour**' - RSS-feeds can become quite big, and if several RSS-feeds are actived the total number of releases to be processed may have a negative impact on the computer/app. Limiting to the last hour will significantly reduce the impact. Beware not to set this if you set the RSS-intrval to 1 hour or more.
+    - '**Ignore year in releasename**' - some releases have the year in the releasename, some do not. You can select to ignore the year when auto-downloading releases.
+    - '**Add Source**' - add your own keyword as a valid Source.
+    - '**Add Resolution**' - add your own keyword as a valid Resolution.
+    - '
 
-  - Menu-option 'Remove bookmark':
+  - Menu-option '**Remove bookmark**':
     - This lists current bookmarks with info on last season/episode found. For each bookmark you may find sub-options to remove individual Sites/Releasegroups/Sources and/or Resolutions, or all of them.
 
-  - Option 'Include all previous episodes in season' - this will bookmark all previous episodes, marking them as seen/downloaded.
+  - Button-Option '**Include all previous episodes in season**' - this will bookmark all previous episodes, marking them as seen/downloaded.
 
-  - Button 'Refresh' - this will refresh all RSS-feeds and list the result in a table, allowing you to easily select shows to bookmark.
+  - Button '**Refresh**' - this will list the result in a table, allowing you to easily select shows to bookmark.
 
-  - Button 'Bookmark' - when bookmarking a show, you mark the selected season/episode as seen/downloaded. If you wish to auto-download an episode make sure to edit the episodenumber to a previous one.
+  - Button '**Reload**' - this will reload all RSS-feeds and list the result in a table, allowing you to easily select shows to bookmark.
 
-  - 'Resolution' - this is a multiselect option. If none are selected all options are valid.
+  - Button '**Download and Bookmark**' - Bookmark this show and download this episode. Beware that it will select the first release that fit the criteria you have selected, not the release you're pointing at!
 
-  - 'Source' - this is a multiselect option. If none are selected all options are valid.
+  - Button '**Bookmark**' - when bookmarking a show, you mark the selected season/episode as seen/downloaded. This will not download the episode selected.
 
-  - 'Releasegroup' - if not filled all groups are allowed.
+  - Multiselect-option '**Resolution**' - if none are selected all options are valid.
+
+  - Multiselect-option '**Source**' - if none are selected all options are valid.
+
+  - Textbox '**Releasegroup**' - if not filled all groups are allowed. Comma or space-separeted list.
   
