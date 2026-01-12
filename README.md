@@ -78,7 +78,7 @@ Short instructions:
     - '**Auto-Bookmark missing episodes**' - this option keep track of which episodes are downloaded, and which episodes have been skipped. Skipped episodes may happen when several episodes are releases simultanously, out of order.
     - '**Auto-download repack/proper**' - a release may be redownloaded if a repack/proper is found. Note that any new repack/proper will be ignored once a repack/proper has been downloaded.
     - '**Do not auto-bookmark episodes with unknown source or resolution**' - some releases do not have a known resolution or source. If the bookmark accepts any resolution and/or source, and the release does not match any known entry, the release will then be classified as a no-match.
-    - '**Limit RSS-feeds to the last hour**' - RSS-feeds can become quite big, and if several RSS-feeds are actived the total number of releases to be processed may have a negative impact on the computer/app. Limiting to the last hour will significantly reduce the impact. Beware not to set this if you set the RSS-intrval to 1 hour or more.
+    - '**Limit RSS-feeds to the last hour**' - RSS-feeds can become quite big, and if several RSS-feeds are actived the total number of releases to be processed may have a negative impact on the computer/app. Limiting to the last hour will significantly reduce the impact.
     - '**Ignore year in releasename**' - some releases have the year in the releasename, some do not. You can select to ignore the year when auto-downloading releases.
     - '**Add Source**' - add your own keyword as a valid Source.
     - '**Add Resolution**' - add your own keyword as a valid Resolution.
