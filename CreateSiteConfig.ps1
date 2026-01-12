@@ -76,7 +76,7 @@ $arraySites = @()
 	#TorrentDay
 	$arraySites += [PSCustomObject]@{
 		Name = "TorrentDay"
-		URL  = [String]"https://www.torrentday.com/t.rss?download;2;34;26;14;82;7;46;33;31;32;24;tp=<RSSKEY>;u=<USERID>"
+		URL  = [String]"https://www.torrentday.com/t.rss?download;2;7;14;24;26;31;32;33;34;46;82;tp=<RSSKEY>;u=<USERID>"
 		RSSKey = [string]""
 		CategoryKey = [string]""
 		Categories = [array]@()
@@ -110,7 +110,7 @@ $arraySites = @()
 	#DigitalCore
 	$arraySites += [PSCustomObject]@{
 		Name = "DigitalCore"
-		URL  = [String]"https://digitalcore.club/api/v1/rss?cat=10,11,8,9,13,14,12,15&passkey=<RSSKEY>"
+		URL  = [String]"https://digitalcore.club/api/v1/rss?cat=8,9,10,11,12,13,14,15&passkey=<RSSKEY>"
 		RSSKey = [string]""
 		CategoryKey = [string]""
 		Categories = [array]@()
