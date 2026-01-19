@@ -15,10 +15,11 @@ $arraySites = @()
 ## AutoTrade       : Should be 0. Will be changed by activing the option in the menu.
 ## HelpString      : This will be displayed below the textboxes you write RSSKey and/or UserID.
 ## UserIDRequired  : Do the site require a UserID along with the RSS-key? If yes set this to 1.
-## UsePersonalFeed : Do you wish to have this app download torrentfiles from your personal RSS-feed? Set to 1 if yes.
+## UsePersonalFeed : Do you wish to have this app download torrentfiles from your personal RSS-feed? Will be changed by activing in the menu.
 ## PersonalFeedURL : This is the URL used for your personal bookmark RSS-feed. As with URL - Replace the RSSKey with "<RSSKEY>" and UserID with <USERID>.
 ## NeverUsed       : A flag that signifies if the site has been used. Leave it to be 1 - it will change automatically.
 ## SiteCategory    : Classify the site. This will group the new sites in the menu.
+## WishlistURL     : URL for RSS-feed for every category on site. Used when making a wishlist.
 ##
 ############
 
@@ -37,6 +38,8 @@ $arraySites = @()
 		PersonalFeedURL = [string]""
 		NeverUsed = [int]1
 		SiteCategory = [string]"General"
+		WishlistURL = [string]"https://rss24h.torrentleech.org/<RSSKEY>"
+		UseWishlistFeed = [int]0
 	}
 	
 	#NORBits
@@ -54,6 +57,8 @@ $arraySites = @()
 		PersonalFeedURL = [string]""
 		NeverUsed = [int]1
 		SiteCategory = [string]"European/Norwegian"
+		WishlistURL  = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
+		UseWishlistFeed = [int]0
 	}
 	
 	#BLUTOPIA
@@ -70,7 +75,9 @@ $arraySites = @()
 		UsePersonalFeed = [int]0
 		PersonalFeedURL = [string]"https://blutopia.cc/rss/5151.<RSSKEY>"
 		NeverUsed = [int]1
-		SiteCategory = [string]"General"
+		SiteCategory = [string]"TV/Movies"
+		WishlistURL  = [String]"https://blutopia.cc/rss/547.<RSSKEY>"
+		UseWishlistFeed = [int]0
 	}
 	
 	#TorrentDay
@@ -88,6 +95,8 @@ $arraySites = @()
 		PersonalFeedURL = [string]"https://torrentday.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
 		NeverUsed = [int]1
 		SiteCategory = [string]"General"
+		WishlistURL = [string]"https://torrentday.com/t.rss?download;1;2;3;4;5;7;8;9;10;11;12;13;14;16;17;18;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;41;42;43;44;45;46;47;48;82;95;96;102;u=<USERID>;tp=<RSSKEY>"
+		UseWishlistFeed = [int]0
 	}
 	
 	#IPTorrents
@@ -105,6 +114,8 @@ $arraySites = @()
 		PersonalFeedURL = [string]"https://iptorrents.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
 		NeverUsed = [int]1
 		SiteCategory = [string]"General"
+		WishlistURL = [string]"https://iptorrents.com/t.rss?download;1;2;3;4;5;6;7;8;20;21;22;23;24;25;26;35;36;37;38;43;44;45;47;48;50;54;55;58;60;62;64;65;66;68;69;71;77;78;79;80;81;82;83;84;85;86;87;89;90;91;92;93;94;95;96;98;99;100;101;102;tp=<RSSKEY>;u=<USERID>"
+		UseWishlistFeed = [int]0
 	}
 	
 	#DigitalCore
@@ -122,6 +133,8 @@ $arraySites = @()
 		PersonalFeedURL = [string]"https://digitalcore.club/api/v1/rss?s=3&passkey=<RSSKEY>"
 		NeverUsed = [int]1
 		SiteCategory = [string]"General"
+		WishlistURL = [string]"https://digitalcore.club/api/v1/rss?cat=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44&passkey=<RSSKEY>"
+		UseWishlistFeed = [int]0
 	}
 
 ######################################## CONFIG END ##############################################
