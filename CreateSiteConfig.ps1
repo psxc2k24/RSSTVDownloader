@@ -7,134 +7,142 @@ $arraySites = @()
 ## Run the code. The code is non-destructive and will not replace your current configuration.
 ##
 ## Name            : Name of the site. This appear in the site-menu
-## URL             : URL for the RSS-feed. Replace the RSSKey with "<RSSKEY>" and UserID with <USERID> please - no need to expose your own.
+## SiteCategory    : Classify the site. This will group the new sites in the menu.
+## Enabled         : Should be 0. Will be changed by activing the site in the menu.
 ## RSSKey          : Should remain empty. Will be filled by menu option.
+## UserIDRequired  : Do the site require a UserID along with the RSS-key? If yes set this to 1.
+## NeverUsed       : A flag that signifies if the site has been used. Leave it to be 1 - it will change automatically.
+## URL             : URL for the RSS-feed. Replace the RSSKey with "<RSSKEY>" and UserID with <USERID> please - no need to expose your own.
+## PersonalFeedURL : This is the URL used for your personal bookmark RSS-feed. As with URL - Replace the RSSKey with "<RSSKEY>" and UserID with <USERID>.
+## WishlistURL     : URL for RSS-feed for every category on site. Used when making a wishlist. As with URL - Replace the RSSKey with "<RSSKEY>" and UserID with <USERID>.
+## UseFeed         : Toggle the main feed on or off. Default is 1 (on)-
+## UsePersonalFeed : Toggle the Personal feed on or off. Default is 0 (off).
+## UseWishlistFeed : Toggle the Wishlist feen on or off. Default is 0 (off).
+## HelpString      : This will be displayed below the textboxes you write RSSKey and/or UserID.
 ## CategoryKey     : Should probably remain empty. Used to limit the RSS-feed by searching the innerxml for certain categories by keyword.
 ## Categories      : Should probably remain empty. Used to limit the RSS-feed by searching the innerxml for certain categories.
-## Enabled         : Should be 0. Will be changed by activing the site in the menu.
 ## AutoTrade       : Should be 0. Will be changed by activing the option in the menu.
-## HelpString      : This will be displayed below the textboxes you write RSSKey and/or UserID.
-## UserIDRequired  : Do the site require a UserID along with the RSS-key? If yes set this to 1.
-## UsePersonalFeed : Do you wish to have this app download torrentfiles from your personal RSS-feed? Will be changed by activing in the menu.
-## PersonalFeedURL : This is the URL used for your personal bookmark RSS-feed. As with URL - Replace the RSSKey with "<RSSKEY>" and UserID with <USERID>.
-## NeverUsed       : A flag that signifies if the site has been used. Leave it to be 1 - it will change automatically.
-## SiteCategory    : Classify the site. This will group the new sites in the menu.
-## WishlistURL     : URL for RSS-feed for every category on site. Used when making a wishlist.
 ##
 ############
 
 	#TorrentLeech
 	$arraySites += [PSCustomObject]@{
-		Name = "TorrentLeech"
-		URL  = [String]"https://rss24h.torrentleech.org/<RSSKEY>"
-		RSSKey = [string]""
-		CategoryKey = [string]"Category"
-		Categories = [array]@("Episodes", "Episodes HD", "Foreign", "Anime")
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"The RSSKey can be found in your profile, under Edit --> RSS Options. https://rss.torrentleech.org/<<RSSKEY>>"
-		UserIDRequired = [int]0
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]""
-		NeverUsed = [int]1
+		Name		 = "TorrentLeech"
 		SiteCategory = [string]"General"
-		WishlistURL = [string]"https://rss24h.torrentleech.org/<RSSKEY>"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://rss24h.torrentleech.org/<RSSKEY>"
+		PersonalFeedURL = [string]""
+		WishlistURL  = [string]"https://rss24h.torrentleech.org/<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"The RSSKey can be found in your profile, under Edit --> RSS Options. https://rss.torrentleech.org/<<RSSKEY>>"
+		CategoryKey  = [string]"Category"
+		Categories   = [array]@("Episodes", "Episodes HD", "Foreign", "Anime")
+		AutoTrade    = [int]0
 	}
 	
 	#NORBits
 	$arraySites += [PSCustomObject]@{
-		Name = "NORBits"
-		URL  = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
-		RSSKey = [string]""
-		CategoryKey = [string]""
-		Categories = [array]@()
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"The RSSKey can be identified in the URL by 'https://norbits.net/rss.php?passkey=<<RSSKEY>>&format=no'"
-		UserIDRequired = [int]0
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]""
-		NeverUsed = [int]1
+		Name		 = "NORBits"
 		SiteCategory = [string]"European/Norwegian"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
+		PersonalFeedURL = [string]""
 		WishlistURL  = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"The RSSKey can be identified in the URL by 'https://norbits.net/rss.php?passkey=<<RSSKEY>>&format=no'"
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
 	}
 	
 	#BLUTOPIA
 	$arraySites += [PSCustomObject]@{
-		Name = "BLUTopia"
-		URL  = [String]"https://blutopia.cc/rss/549.<RSSKEY>"
-		RSSKey = [string]""
-		CategoryKey = [string]""
-		Categories = [array]@()
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"The RSSKey can be identified in the URL by 'https://blutopia.cc/rss/<<ID>>.<<RSSKEY>>'"
-		UserIDRequired = [int]0
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]"https://blutopia.cc/rss/5151.<RSSKEY>"
-		NeverUsed = [int]1
+		Name		 = "BLUTopia"
 		SiteCategory = [string]"TV/Movies"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://blutopia.cc/rss/549.<RSSKEY>"
+		PersonalFeedURL = [string]"https://blutopia.cc/rss/5151.<RSSKEY>"
 		WishlistURL  = [String]"https://blutopia.cc/rss/547.<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"The RSSKey can be identified in the URL by 'https://blutopia.cc/rss/<<ID>>.<<RSSKEY>>'"
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
 	}
 	
 	#TorrentDay
 	$arraySites += [PSCustomObject]@{
-		Name = "TorrentDay"
-		URL  = [String]"https://www.torrentday.com/t.rss?download;2;7;14;24;26;31;32;33;34;46;82;tp=<RSSKEY>;u=<USERID>"
-		RSSKey = [string]""
-		CategoryKey = [string]""
-		Categories = [array]@()
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"In the RSS URL the RSSKey can be identified by ';tp=<<RSSKEY>>;' and the UserID by ';u=<<USERID>>;'"
-		UserIDRequired = [int]1
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]"https://torrentday.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
-		NeverUsed = [int]1
+		Name		 = "TorrentDay"
 		SiteCategory = [string]"General"
-		WishlistURL = [string]"https://torrentday.com/t.rss?download;1;2;3;4;5;7;8;9;10;11;12;13;14;16;17;18;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;41;42;43;44;45;46;47;48;82;95;96;102;u=<USERID>;tp=<RSSKEY>"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]1
+		NeverUsed    = [int]1
+		URL		     = [String]"https://www.torrentday.com/t.rss?download;2;7;14;24;26;31;32;33;34;46;82;tp=<RSSKEY>;u=<USERID>"
+		PersonalFeedURL = [string]"https://torrentday.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
+		WishlistURL  = [string]"https://torrentday.com/t.rss?download;1;2;3;4;5;7;8;9;10;11;12;13;14;16;17;18;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;41;42;43;44;45;46;47;48;82;95;96;102;u=<USERID>;tp=<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by ';tp=<<RSSKEY>>;' and the UserID by ';u=<<USERID>>;'"
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
 	}
 	
 	#IPTorrents
 	$arraySites += [PSCustomObject]@{
-		Name = "IPTorrents"
-		URL  = [String]"https://iptorrents.com/t.rss?download;4;5;22;23;24;25;26;55;60;65;66;78;79;82;83;99;tp=<RSSKEY>;u=<USERID>"
-		RSSKey = [string]""
-		CategoryKey = [string]""
-		Categories = [array]@()
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"In the RSS URL the RSSKey can be identified by ';tp=<<RSSKEY>>;' and the UserID by ';u=<<USERID>>;'"
-		UserIDRequired = [int]1
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]"https://iptorrents.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
-		NeverUsed = [int]1
+		Name		 = "IPTorrents"
 		SiteCategory = [string]"General"
-		WishlistURL = [string]"https://iptorrents.com/t.rss?download;1;2;3;4;5;6;7;8;20;21;22;23;24;25;26;35;36;37;38;43;44;45;47;48;50;54;55;58;60;62;64;65;66;68;69;71;77;78;79;80;81;82;83;84;85;86;87;89;90;91;92;93;94;95;96;98;99;100;101;102;tp=<RSSKEY>;u=<USERID>"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]1
+		NeverUsed    = [int]1
+		URL		     = [String]"https://iptorrents.com/t.rss?download;4;5;22;23;24;25;26;55;60;65;66;78;79;82;83;99;tp=<RSSKEY>;u=<USERID>"
+		PersonalFeedURL = [string]"https://iptorrents.com/t.rss?bookmarks;download;u=<USERID>;tp=<RSSKEY>"
+		WishlistURL  = [string]"https://iptorrents.com/t.rss?download;1;2;3;4;5;6;7;8;20;21;22;23;24;25;26;35;36;37;38;43;44;45;47;48;50;54;55;58;60;62;64;65;66;68;69;71;77;78;79;80;81;82;83;84;85;86;87;89;90;91;92;93;94;95;96;98;99;100;101;102;tp=<RSSKEY>;u=<USERID>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by ';tp=<<RSSKEY>>;' and the UserID by ';u=<<USERID>>;'"
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
 	}
 	
 	#DigitalCore
 	$arraySites += [PSCustomObject]@{
-		Name = "DigitalCore"
-		URL  = [String]"https://digitalcore.club/api/v1/rss?cat=8,9,10,11,12,13,14,15&passkey=<RSSKEY>"
-		RSSKey = [string]""
-		CategoryKey = [string]""
-		Categories = [array]@()
-		Enabled = [int]0
-		AutoTrade = [int]0
-		HelpString = [string]"In the RSS URL the RSSKey can be identified by 'passkey=<<RSSKEY>>'"
-		UserIDRequired = [int]0
-		UsePersonalFeed = [int]0
-		PersonalFeedURL = [string]"https://digitalcore.club/api/v1/rss?s=3&passkey=<RSSKEY>"
-		NeverUsed = [int]1
+		Name		 = "DigitalCore"
 		SiteCategory = [string]"General"
-		WishlistURL = [string]"https://digitalcore.club/api/v1/rss?cat=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44&passkey=<RSSKEY>"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://digitalcore.club/api/v1/rss?cat=8,9,10,11,12,13,14,15&passkey=<RSSKEY>"
+		PersonalFeedURL = [string]"https://digitalcore.club/api/v1/rss?s=3&passkey=<RSSKEY>"
+		WishlistURL  = [string]"https://digitalcore.club/api/v1/rss?cat=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44&passkey=<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
 		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by 'passkey=<<RSSKEY>>'"
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
 	}
 
 ######################################## CONFIG END ##############################################
