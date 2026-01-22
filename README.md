@@ -1,16 +1,23 @@
-This small gui-app replaces adding filters and regex to rss-feeds in you torrent client.
+RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the ones that just need the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within minutes.
+
+By default the app starts in safe-mode (called Dry-run) where everything is simulated except actually sending the downloaded .torrent files to the torrent client. Should be safe to test without worry.
+
+So, what can it do?
+
+Basically, the small gui-app replaces adding filters and regex to rss-feeds in you torrent client.
 features include:
  - point and click bookmarks for tv-shows
  - auto-downloading and opening .torrent files
  - auto-downloading out-of-order episode-releases
- - auto-downloading the same release from different sites/feeds (auto-trading)
+ - auto-downloading the same release from different sites/feeds (auto-trading - should be used with care)
  - auto-downloading of repacks/propers
  - auto-downloading of personal bookmarks from selected sites
+ - auto-downloading of wishlist bookmarks (sort of like what radarr does, but not limited to movies)
 
 Work in progress. Expect frequent updates.
 
 <a href="./bin/x64/RSSTVDownloader.exe" download>Windows exe</a> can be found in the bin/x64 directory and the <a href="./RSSTVDownloader.ps1" download>powershell sourcecode</a> in the root directory.
-
+A separate script <a href= "./CreateSiteConfig.ps1" download>CreateSiteConfig.ps1</a> can be used to add your own sites. Please send any working config my way so I can add it to the script.
 
 The following sites are recognized (more can be added by request):
  - TL
@@ -65,41 +72,3 @@ Screenshots:
 
 
 
-Short instructions:
-  - Menu-option '**Sites**':
-    - This lists the sites availible. The ones marked are active, meaning the RSS-feed for site is downloaded at intervals.
-    - Each site listed has two suboptions:
-      - '**Set rSSKey**' - this will set/change the RSSKey (and UserID if applicable)
-      - '**Enable Autotrade for this site**' - Enables/disabled the Autotrade option.
-        '**Autotrade**' is defined as downloading the same release(name) from different sites, not triggering the dupe-control for that release. Take care when activating - some sites re-releases the torrent with the same name after repackaging and/or adding files to the release. Observe on which sites you wish to have the Autotrade option on.
-
-  - Menu-option '**Options**':
-    - '**RSS Interval**' - how often should the app refresh the rss-feeds?
-    - '**Auto-Bookmark missing episodes**' - this option keep track of which episodes are downloaded, and which episodes have been skipped. Skipped episodes may happen when several episodes are releases simultanously, out of order.
-    - '**Auto-download repack/proper**' - a release may be redownloaded if a repack/proper is found. Note that any new repack/proper will be ignored once a repack/proper has been downloaded.
-    - '**Do not auto-bookmark episodes with unknown source or resolution**' - some releases do not have a known resolution or source. If the bookmark accepts any resolution and/or source, and the release does not match any known entry, the release will then be classified as a no-match.
-    - '**Limit RSS-feeds to the last hour**' - RSS-feeds can become quite big, and if several RSS-feeds are actived the total number of releases to be processed may have a negative impact on the computer/app. Limiting to the last hour will significantly reduce the impact.
-    - '**Ignore year in releasename**' - some releases have the year in the releasename, some do not. You can select to ignore the year when auto-downloading releases.
-    - '**Add Source**' - add your own keyword as a valid Source.
-    - '**Add Resolution**' - add your own keyword as a valid Resolution.
-    - '
-
-  - Menu-option '**Remove bookmark**':
-    - This lists current bookmarks with info on last season/episode found. For each bookmark you may find sub-options to remove individual Sites/Releasegroups/Sources and/or Resolutions, or all of them.
-
-  - Button-Option '**Include all previous episodes in season**' - this will bookmark all previous episodes, marking them as seen/downloaded.
-
-  - Button '**Refresh**' - this will list the result in a table, allowing you to easily select shows to bookmark.
-
-  - Button '**Reload**' - this will reload all RSS-feeds and list the result in a table, allowing you to easily select shows to bookmark.
-
-  - Button '**Download and Bookmark**' - Bookmark this show and download this episode. Beware that it will select the first release that fit the criteria you have selected, not the release you're pointing at!
-
-  - Button '**Bookmark**' - when bookmarking a show, you mark the selected season/episode as seen/downloaded. This will not download the episode selected.
-
-  - Multiselect-option '**Resolution**' - if none are selected all options are valid.
-
-  - Multiselect-option '**Source**' - if none are selected all options are valid.
-
-  - Textbox '**Releasegroup**' - if not filled all groups are allowed. Comma or space-separeted list.
-  
