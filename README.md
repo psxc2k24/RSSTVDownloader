@@ -1,4 +1,4 @@
-RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the ones that just need the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within minutes.
+RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the people just needing the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within minutes.
 
 By default the app starts in safe-mode (called Dry-run) where everything is simulated except actually sending the downloaded .torrent files to the torrent client. Should be safe to test without worry.
 
@@ -13,6 +13,8 @@ features include:
  - auto-downloading of repacks/propers
  - auto-downloading of personal bookmarks from selected sites
  - auto-downloading of wishlist bookmarks (sort of like what radarr does, but not limited to movies)
+
+Please note: <b>TV-series are recognized wih having season&episode markers</b> (S{number}E{number} or {number}E{number} or {number}X{number}) <b>in the title. TV-series annoted with dates instead of season&episode is not recognized and will not be eligble for bookmarking</b>.
 
 Work in progress. Expect frequent updates.
 
@@ -42,7 +44,7 @@ No admin privileges required.
 
 
 Expected behavior:
-  - Creation and updating of content in the HKCU:\Software\RSSTVDownloader registry key
+  - Creation and updating of content in the <b>HKCU:\Software\RSSTVDownloader</b> registry key
   - Creation of RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. These will be removed by the app after 7 days.
   - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. These will be automatically removed when >24 hours has passed.
   - Internet-traffic is limited to fetching of RSS-feeds and .torrent files from sites. There should be no other forms of external communication.
