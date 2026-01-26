@@ -165,6 +165,26 @@ $arraySites = @()
 		AutoTrade    = [int]0
 	}
 
+	#RevolutionTT
+	$arraySites += [PSCustomObject]@{
+		Name		 = "RevoTT"
+		SiteCategory = [string]"General"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://revott.me/rss.php?feed=dl&passkey=<RSSKEY>"
+		PersonalFeedURL = [string]"https://revott.me/rss.php?feed=dl&bookmarks=on&passkey=<RSSKEY>"
+		WishlistURL  = [string]"https://revott.me/rss.php?feed=dl&passkey=<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
+		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by 'passkey=<<RSSKEY>>'."
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
+	}
+
 ######################################## CONFIG END ##############################################
 
 $syncHash = @{}
