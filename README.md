@@ -14,7 +14,7 @@ features include:
  - auto-downloading of personal bookmarks from selected sites
  - auto-downloading of wishlist bookmarks (sort of like what radarr does, but not limited to movies)
 
-Please note: <b>TV-series are recognized wih having season&episode markers</b> (S{number}E{number} or {number}E{number} or {number}X{number}) <b>in the title. TV-series annoted with dates instead of season&episode is not recognized and will not be eligble for bookmarking</b>.
+Please note: <b>TV-series are recognized with having season&episode markers</b> (S{number}E{number} or {number}E{number} or {number}X{number}) <b>in the title. TV-series annoted with dates instead of season&episode is not recognized and will not be eligble for bookmarking</b>.
 
 Work in progress. No more features will be added, only bugfixes. Awaiting v1 release.
 
