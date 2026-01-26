@@ -16,7 +16,7 @@ features include:
 
 Please note: <b>TV-series are recognized wih having season&episode markers</b> (S{number}E{number} or {number}E{number} or {number}X{number}) <b>in the title. TV-series annoted with dates instead of season&episode is not recognized and will not be eligble for bookmarking</b>.
 
-Work in progress. Expect frequent updates.
+Work in progress. No more features will be added, only bugfixes. Awaiting v1 release.
 
 <a href="./bin/x64/RSSTVDownloader.exe" download>Windows exe</a> can be found in the bin/x64 directory and the <a href="./RSSTVDownloader.ps1" download>powershell sourcecode</a> in the root directory.
 A separate script <a href= "./CreateSiteConfig.ps1" download>CreateSiteConfig.ps1</a> can be used to add your own sites. Please send any working config my way so I can add it to the script.
@@ -28,6 +28,8 @@ The following sites are recognized (more can be added by request):
  - TD
  - IPT
  - DC
+ - FF
+ - RTT
 
 Requirements:
   - Windows 11
