@@ -145,6 +145,26 @@ $arraySites = @()
 		AutoTrade    = [int]0
 	}
 
+	#FunFile
+	$arraySites += [PSCustomObject]@{
+		Name		 = "Funfile"
+		SiteCategory = [string]"General"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://www.funfile.org/rss.php?feed=dl&cat=7&torrentonly=yes&passkey=<RSSKEY>"
+		PersonalFeedURL = [string]"https://www.funfile.org/rss.php?feed=dl&bookmark=yes&torrentonly=yes&passkey=<RSSKEY>"
+		WishlistURL  = [string]"https://www.funfile.org/rss.php?feed=dl&cat=4,6,7,19,22,27,31,40,43,44,49&torrentonly=yes&passkey=<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
+		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by 'passkey=<<RSSKEY>>'. Remember to whitelist the public ip where the app is running. Take note that the date in the feeds are fake."
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
+	}
+
 ######################################## CONFIG END ##############################################
 
 $syncHash = @{}
