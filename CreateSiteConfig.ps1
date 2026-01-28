@@ -185,6 +185,27 @@ $arraySites = @()
 		AutoTrade    = [int]0
 	}
 
+	#Luminarr
+	$arraySites += [PSCustomObject]@{
+		Name		 = "Luminarr"
+		SiteCategory = [string]"TV/Movies"
+		Enabled	     = [int]0
+		RSSKey	     = [string]""
+		UserIDRequired = [int]0
+		NeverUsed    = [int]1
+		URL		     = [String]"https://luminarr.me/rss/15.<RSSKEY>"
+		PersonalFeedURL = [string]"https://luminarr.me/rss/17.<RSSKEY>"
+		WishlistURL  = [string]"https://luminarr.me/rss/16.<RSSKEY>"
+		UseFeed	     = [int]1
+		UsePersonalFeed = [int]0
+		UseWishlistFeed = [int]0
+		HelpString   = [string]"In the RSS URL the RSSKey can be identified by 'https://luminarr.me/rss/<number>.<<RSSKEY>>'."
+		CategoryKey  = [string]""
+		Categories   = [array]@()
+		AutoTrade    = [int]0
+	}
+	
+
 ######################################## CONFIG END ##############################################
 
 $syncHash = @{}

@@ -5,7 +5,7 @@ By default the app starts in safe-mode (called Dry-run) where everything is simu
 So, what can it do?
 
 Basically, the small gui-app replaces adding filters and regex to rss-feeds in you torrent client.
-features include:
+Features include:
  - point and click bookmarks for tv-shows
  - auto-downloading and opening .torrent files
  - auto-downloading out-of-order episode-releases
@@ -30,6 +30,7 @@ The following sites are recognized (more can be added by request):
  - DC
  - FF
  - RTT
+ - Luminarr
 
 Requirements:
   - Windows 11
