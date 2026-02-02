@@ -23,6 +23,7 @@ $arraySites = @()
 ## Categories      : Should probably remain empty. Used to limit the RSS-feed by searching the innerxml for certain categories.
 ## AutoTrade       : Should be 0. Will be changed by activing the option in the menu.
 ## RSSKeyRequired  : Usually set to 1. Some sites use a unique key per RSS-feed, not related to RSSKeys at all. These sites will have to be added manually by this script.
+## HammerSensitive : Usually set to 0. Certain sites are sensitive to multi-torrent downloads. This option will only allow one .torrent download per RSS Interval from the site.
 ##
 ############
 
@@ -45,6 +46,7 @@ $arraySites = @()
 		CategoryKey  = [string]"Category"
 		Categories   = [array]@("Episodes", "Episodes HD", "Foreign", "Anime")
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 	
 	#NORBits
@@ -66,6 +68,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 	
 	#BLUTOPIA
@@ -87,6 +90,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 	
 	#TorrentDay
@@ -108,6 +112,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 	
 	#IPTorrents
@@ -129,6 +134,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 	
 	#DigitalCore
@@ -150,6 +156,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 
 	#FunFile
@@ -171,6 +178,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 
 	#RevolutionTT
@@ -192,6 +200,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 
 	#Luminarr
@@ -213,6 +222,7 @@ $arraySites = @()
 		CategoryKey  = [string]""
 		Categories   = [array]@()
 		AutoTrade    = [int]0
+		HammerSensitive = [int]0
 	}
 
 ######################################## CONFIG END ##############################################
