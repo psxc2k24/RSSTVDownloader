@@ -22,6 +22,7 @@ $arraySites = @()
 ## CategoryKey     : Should probably remain empty. Used to limit the RSS-feed by searching the innerxml for certain categories by keyword.
 ## Categories      : Should probably remain empty. Used to limit the RSS-feed by searching the innerxml for certain categories.
 ## AutoTrade       : Should be 0. Will be changed by activing the option in the menu.
+## RSSKeyRequired  : Usually set to 1. Some sites use a unique key per RSS-feed, not related to RSSKeys at all. These sites will have to be added manually by this script.
 ##
 ############
 
@@ -31,6 +32,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://rss24h.torrentleech.org/<RSSKEY>"
@@ -51,6 +53,7 @@ $arraySites = @()
 		SiteCategory = [string]"European/Norwegian"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
@@ -71,6 +74,7 @@ $arraySites = @()
 		SiteCategory = [string]"TV/Movies"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://blutopia.cc/rss/549.<RSSKEY>"
@@ -91,6 +95,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]1
 		NeverUsed    = [int]1
 		URL		     = [String]"https://www.torrentday.com/t.rss?download;2;7;14;24;26;31;32;33;34;46;82;tp=<RSSKEY>;u=<USERID>"
@@ -111,6 +116,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]1
 		NeverUsed    = [int]1
 		URL		     = [String]"https://iptorrents.com/t.rss?download;4;5;22;23;24;25;26;55;60;65;66;78;79;82;83;99;tp=<RSSKEY>;u=<USERID>"
@@ -131,6 +137,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://digitalcore.club/api/v1/rss?cat=8,9,10,11,12,13,14,15&passkey=<RSSKEY>"
@@ -151,6 +158,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://www.funfile.org/rss.php?feed=dl&cat=7&torrentonly=yes&passkey=<RSSKEY>"
@@ -167,10 +175,11 @@ $arraySites = @()
 
 	#RevolutionTT
 	$arraySites += [PSCustomObject]@{
-		Name		 = "RevoTT"
+		Name		 = "RevolutionTT"
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://revott.me/rss.php?feed=dl&passkey=<RSSKEY>"
@@ -191,6 +200,7 @@ $arraySites = @()
 		SiteCategory = [string]"TV/Movies"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
+        RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://luminarr.me/rss/15.<RSSKEY>"
@@ -204,7 +214,6 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 	}
-	
 
 ######################################## CONFIG END ##############################################
 
