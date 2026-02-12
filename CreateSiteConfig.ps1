@@ -24,6 +24,9 @@ $arraySites = @()
 ## AutoTrade       : Should be 0. Will be changed by activing the option in the menu.
 ## RSSKeyRequired  : Usually set to 1. Some sites use a unique key per RSS-feed, not related to RSSKeys at all. These sites will have to be added manually by this script.
 ## HammerSensitive : Usually set to 0. Certain sites are sensitive to multi-torrent downloads. This option will only allow one .torrent download per RSS Interval from the site.
+## SizeElement     : This is the RSS xml property that holds information about size of the relase.
+## EnableBookmarkSizeLimits : Enforce Bookmark size limits on site. This is toggled in the menu. Elements outside the limits will show as red in the datagrid.
+## EnableWishlistSizeLimits : Enforce Wishlist size limits on site. This is toggled in the menu.
 ##
 ############
 
@@ -33,7 +36,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://rss24h.torrentleech.org/<RSSKEY>"
@@ -47,6 +50,9 @@ $arraySites = @()
 		Categories   = [array]@("Episodes", "Episodes HD", "Foreign", "Anime")
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]""
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
 	
 	#NORBits
@@ -55,7 +61,7 @@ $arraySites = @()
 		SiteCategory = [string]"European/Norwegian"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://norbits.net/rss.php?feed=dl&passkey=<RSSKEY>&format=no"
@@ -69,6 +75,9 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"InnerText"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
 	
 	#BLUTOPIA
@@ -77,7 +86,7 @@ $arraySites = @()
 		SiteCategory = [string]"TV/Movies"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://blutopia.cc/rss/549.<RSSKEY>"
@@ -91,6 +100,9 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"contentlength"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
 	
 	#TorrentDay
@@ -99,7 +111,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]1
 		NeverUsed    = [int]1
 		URL		     = [String]"https://www.torrentday.com/t.rss?download;2;7;14;24;26;31;32;33;34;46;82;tp=<RSSKEY>;u=<USERID>"
@@ -113,6 +125,9 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"description"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
 	
 	#IPTorrents
@@ -121,7 +136,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]1
 		NeverUsed    = [int]1
 		URL		     = [String]"https://iptorrents.com/t.rss?download;4;5;22;23;24;25;26;55;60;65;66;78;79;82;83;99;tp=<RSSKEY>;u=<USERID>"
@@ -135,6 +150,9 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"description"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
 	
 	#DigitalCore
@@ -143,7 +161,7 @@ $arraySites = @()
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://digitalcore.club/api/v1/rss?cat=8,9,10,11,12,13,14,15&passkey=<RSSKEY>"
@@ -157,15 +175,18 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"size"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
-
+	
 	#FunFile
 	$arraySites += [PSCustomObject]@{
 		Name		 = "Funfile"
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://www.funfile.org/rss.php?feed=dl&cat=7&torrentonly=yes&passkey=<RSSKEY>"
@@ -179,15 +200,18 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"size"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
-
+	
 	#RevolutionTT
 	$arraySites += [PSCustomObject]@{
 		Name		 = "RevolutionTT"
 		SiteCategory = [string]"General"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://revott.me/rss.php?feed=dl&passkey=<RSSKEY>"
@@ -201,15 +225,18 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"description"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
-
+	
 	#Luminarr
 	$arraySites += [PSCustomObject]@{
 		Name		 = "Luminarr"
 		SiteCategory = [string]"TV/Movies"
 		Enabled	     = [int]0
 		RSSKey	     = [string]""
-        RSSKeyRequired = [int]1
+		RSSKeyRequired = [int]1
 		UserIDRequired = [int]0
 		NeverUsed    = [int]1
 		URL		     = [String]"https://luminarr.me/rss/15.<RSSKEY>"
@@ -223,8 +250,11 @@ $arraySites = @()
 		Categories   = [array]@()
 		AutoTrade    = [int]0
 		HammerSensitive = [int]0
+		SizeElement  = [string]"contentlength"
+		EnableBookmarkSizeLimits = 1
+		EnableWishlistSizeLimits = 1
 	}
-
+	
 ######################################## CONFIG END ##############################################
 
 $syncHash = @{}

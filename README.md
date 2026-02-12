@@ -13,6 +13,7 @@ Features include:
  - auto-downloading of repacks/propers
  - auto-downloading of personal bookmarks from selected sites
  - auto-downloading of wishlist bookmarks (sort of like what radarr does, but not limited to movies)
+ - filter releases by name, season, episode, source, resolution, releasegroup, site and size 
  - easily add support of your own sites with included script
 
 Please note: <b>TV-series are recognized with having season&episode markers</b> (S{number}E{number} or {number}E{number} or {number}X{number}) <b>in the title. TV-series annoted with dates instead of season&episode is not recognized and will not be eligble for bookmarking</b>.
