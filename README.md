@@ -1,6 +1,8 @@
-RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the people just needing the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within minutes.
+Current version: v1.0.0.9
 
-By default the app starts in safe-mode (called Dry-run) where everything is simulated except actually sending the downloaded .torrent files to the torrent client. Should be safe to test without worry.
+RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the people just needing the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within (literal) minutes.
+
+By default the app starts in safe-mode (called Dry-run) where everything works as normal except actually sending the downloaded .torrent files to the torrent client. This activates some extra logging as well. Can be run on any windows11 computer/vm to verify setup, see what it can do, check for malicous behaviour or whatnot. 
 
 So, what can it do?
 
@@ -30,7 +32,7 @@ The following sites are recognized (more can be added by request):
  - DC
  - FF
  - RTT
- - Luminarr
+ - LUM
 
 Requirements:
   - Windows 11
@@ -48,9 +50,9 @@ No admin privileges required.
 
 Expected behavior:
   - Creation and updating of content in the <b>HKCU:\Software\RSSTVDownloader</b> registry key
-  - Creation of RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. These will be removed by the app after 7 days.
-  - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. These will be automatically removed when >24 hours has passed.
-  - Internet-traffic is limited to fetching of RSS-feeds and .torrent files from sites. There should be no other forms of external communication.
+  - Creation of RSSTVDownloader.cmtrace.log and RSSTVDownloader_DATE.cmtrace.log files in the %temp% directory. Logfiles older than 7 days will be removed automatically.
+  - Creation of RSSTVDownloader_DATEANDTIME.torrent files in the %temp% directory. Files older than 24 hours will be removed automatically.
+  - Internet-traffic is limited to fetching RSS-feeds and .torrent files from sites. There should be no other forms of external communication.
 
 
 
@@ -71,9 +73,18 @@ VirusTotal Scan:
 
 Screenshots:
 ![Screenshot 1](./Images/Screenshot1.jpg)
-![Screenshot 2](./Images/Screenshot2.jpg)
-![Screenshot 3](./Images/Screenshot3.jpg)
-![Screenshot 4](./Images/Screenshot4.jpg)
+The Sites menu. Sites you have (once) activated will be listed below, while sites availible will be in the submenu.
 
+![Screenshot 2](./Images/Screenshot2.jpg)
+Options. These are "global" options.
+
+![Screenshot 3](./Images/Screenshot3.jpg)
+"Remove Bookmarks" shows which shows, and when latest episode was downloaded, and from where. Shows with no download for more than 30 days will be marked as in hiatus, and when more than a year hs passed will be marked as dead.
+
+![Screenshot 4](./Images/Screenshot4.jpg)
+"Remove Wishlist Bookmark" shows releases you have an eye out for. These will automatically be removed once a hit is found.
+
+![Screenshot 5](./Images/Screenshot4.jpg)
+This screenshot shows a typical work-view where you can select and add shows to bookmark. 
 
 
