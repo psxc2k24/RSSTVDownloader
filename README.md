@@ -84,7 +84,7 @@ Options. These are "global" options.
 ![Screenshot 4](./Images/Screenshot4.jpg)
 "Remove Wishlist Bookmark" shows releases you have an eye out for. These will automatically be removed once a hit is found.
 
-![Screenshot 5](./Images/Screenshot4.jpg)
+![Screenshot 5](./Images/Screenshot5.jpg)
 This screenshot shows a typical work-view where you can select and add shows to bookmark. 
 
 
