@@ -1,4 +1,4 @@
-Current version: v1.0.1.9
+Current version: v1.0.2.9
 
 RSSTVDownloader may be viewed as a poor-man's Sonarr, with a mini-Radarr included. It does not aim to compete with the forementioned apps, but rather be a quick solution for the people just needing the basic features. There's very few bells and whistles with this app, and thus few options. The focus is more a WYSIWYG approach with a point-and-click GUI. Thus, it can be up and running within (literal) minutes.
 
